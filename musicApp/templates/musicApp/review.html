@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Review Page</h2>
+
+<ul>
+    {% for p in review %}
+    <li><a href="{% url 'reviewdetail' id=p.id %}">{{ p.song }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
